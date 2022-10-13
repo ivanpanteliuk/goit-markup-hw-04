@@ -9,6 +9,9 @@
   --button-hover-color: #188ce8;
   --header-border-color: #ececec;
   --border-color: #eeeeee;
+  --overlay-color: rgba(47, 48, 58, 0.4);
+  --our-team-social-background: #333;
+  --footer-social-background-icon-color: #afb1b8;
 }
 body {
   color: var(--primary-text-color);
@@ -45,6 +48,7 @@ img {
 
 .link {
   text-decoration: none;
+  color: inherit;
 }
 
 /* Section styles */
@@ -58,6 +62,7 @@ img {
   color: var(--title-text-color);
   font-size: 36px;
   line-height: 1.1667;
+  text-align: center;
 }
 
 /* Container  styles*/
@@ -148,6 +153,11 @@ img {
   color: var(--accent-color);
 }
 
+.contact-link:hover .contacts-icon,
+.contact-link:focus .contacts-icon {
+  fill: currentcolor;
+}
+
 .contacts-nav {
   display: flex;
   margin-left: auto;
@@ -157,13 +167,27 @@ img {
   letter-spacing: 0.02em;
 }
 
+.contacts-icon {
+  margin-right: 10px;
+
+  fill: currentcolor;
+}
+
 /* Hero styles */
 
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  display: flex;
+  align-items: center;
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: var(--hero-footer-background-color);
   text-align: center;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero-background.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 .hero-title {
@@ -258,6 +282,18 @@ img {
   max-width: 270px;
 }
 
+.benefits-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  width: 270px;
+  height: 120px;
+
+  background-color: var(--our-team-section-background);
+  border-radius: 4px;
+}
+
 .benefits-list-title {
   margin-bottom: 10px;
 
@@ -324,8 +360,79 @@ img {
 }
 
 .our-team-list .text {
+  margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.875;
+}
+
+.social-list {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.social-item {
+  width: 44px;
+  height: 44px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+
+  fill: var(--footer-social-background-icon-color);
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-color);
+}
+
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+  fill: var(--primary-white-color);
+}
+
+/* Clients section  */
+
+.clients-title {
+  margin-bottom: 50px;
+}
+
+.clients-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.clients-item {
+  width: 170px;
+  height: 92px;
+}
+
+.clients-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--footer-social-background-icon-color);
+  border-radius: 4px;
+  fill: var(--footer-social-background-icon-color);
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  border-color: var(--accent-color);
+}
+
+.clients-link:hover .client-icon,
+.clients-link:focus .client-icon {
+  fill: var(--accent-color);
 }
 
 /* Footer styles */
@@ -369,6 +476,29 @@ img {
   display: block;
 }
 
+.footer .container {
+  display: flex;
+  align-items: baseline;
+  gap: 70px;
+}
+
+.social-text {
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+}
+
+.footer .social-link {
+  background-color: rgba(255, 255, 255, 0.1);
+  fill: var(--primary-white-color);
+}
+
+.footer .social-link:hover,
+.footer .social-link:focus {
+  background-color: var(--accent-color);
+}
+
 /* Filter list */
 
 .filter {
@@ -381,6 +511,12 @@ img {
   margin-right: 8px;
 }
 
+.button.secondary:hover,
+.button.secondary:focus {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
 /* Portfolio */
 
 .portfolio-list {
@@ -388,6 +524,15 @@ img {
   flex-wrap: wrap;
   gap: 30px;
   flex-basis: calc((100% - 60px) / 3);
+}
+.portfolio-card {
+  display: block;
+}
+
+.portfolio-card.link:hover,
+.portfolio-card.link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .portfolio-title {
