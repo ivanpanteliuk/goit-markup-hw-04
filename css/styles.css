@@ -148,6 +148,11 @@ img {
   margin-right: 50px;
 }
 
+.contact-link {
+  display: flex;
+  align-items: center;
+}
+
 .contact-link:hover,
 .contact-link:focus {
   color: var(--accent-color);
